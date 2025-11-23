@@ -3,7 +3,7 @@ import { Character, CLASS_BONUSES, CharacterClass, Quest } from '@/types/game';
 import { INITIAL_QUESTS, WEAPONS } from '@/data/gameData';
 import CharacterCreation from '@/components/game/CharacterCreation';
 import CharacterSheet from '@/components/game/CharacterSheet';
-import DungeonView from '@/components/game/DungeonView';
+import Dungeon3D from '@/components/game/Dungeon3D';
 import Inventory from '@/components/game/Inventory';
 import QuestLog from '@/components/game/QuestLog';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
@@ -158,7 +158,7 @@ export default function Index() {
                   <TabsTrigger value="inventory">🎒 Инвентарь</TabsTrigger>
                 </TabsList>
                 <TabsContent value="dungeon" className="mt-6">
-                  <DungeonView
+                  <Dungeon3D
                     character={character}
                     onCharacterUpdate={setCharacter}
                   />
